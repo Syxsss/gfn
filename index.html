@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GFN Files</title>
+    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrQanvIAZ4J5QSelONLdVzq4dSaKRuYcmwMW0miulQSLzVOxSsCv6Yva1REHN5qKkig34&usqp=CAU" type="image/png">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://wallpapercave.com/wp/wp11461296.jpg') center/cover fixed;
+            color: #fff;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+        }
+
+        header {
+            background-color: rgba(51, 51, 51, 0.8);
+            padding: 1em;
+            text-align: center;
+            position: relative;
+        }
+
+        #current-time {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: #fff;
+            font-size: 1.5em;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .search-bar {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .download-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .download-item {
+            background-color: #0066cc;
+            color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .download-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+
+        a {
+            text-decoration: none;
+            color: #004080;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #00264d;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em;
+            background-color: rgba(51, 51, 51, 0.8);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <span id="current-time"></span>
+        <h1>My Files</h1>
+    </header>
+
+    <section>
+        <div class="search-bar">
+            <label for="search">Search files:</label>
+            <input type="text" id="search" name="search" placeholder="Write the file name...">
+        </div>
+
+        <h2>Available Files</h2>
+        <ul class="download-list" id="fileList">
+            <li class="download-item">
+                <h3>Open Quick Assist</h3>
+                <a href="ms-quick-assist:" download>Open</a>
+            </li>
+            <li class="download-item">
+                <h3>CMD</h3>
+                <a href="https://cdn.discordapp.com/attachments/1120094264622325780/1155068189596717086/cmd.url" download>Download</a>
+            </li>
+<li class="download-item">
+                <h3>UwUTools.exe</h3>
+                <a href="https://picteon.dev/files/UwUTools.exe" download>Download</a>
+            </li>
+<li class="download-item">
+                <h3>Arcade.exe</h3>
+                <a href="https://picteon.dev/files/Arcade.exe" download>Download</a>
+            </li>
+<li class="download-item">
+                <h3>rdl.exe</h3>
+                <a href="https://picteon.dev/files/rdl.exe" download>Download</a>
+            </li>
+<li class="download-item">
+                <h3>Cloudforce-Revamped.exe</h3>
+                <a href="https://picteon.dev/files/Cloudforce-Revamped.exe" download>Download</a>
+            </li>
+<li class="download-item">
+                <h3>Uadsol.exe</h3>
+                <a href="https://picteon.dev/files/UadSol.exe" download>Download</a>
+            </li>
+<li class="download-item">
+                <h3>Firefox.zip</h3>
+                <a href="https://picteon.dev/files/Firefox.zip" download>Download</a>
+            </li>
+<li class="download-item">
+                <h3>CrossoutMethodByUwUTools.bat</h3>
+                <a href="https://cdn.discordapp.com/attachments/1169970192479166514/1173729735461847050/CrossoutMethodByUwUTools.bat?ex=656503ff&is=65528eff&hm=b76398a3c575692e3890ad7db740c292196846ece84a1fb64f198ec2b8c021d5&" download>Download</a>
+            </li>
+           
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; By Syxl</p>
+    </footer>
+
+    <script>
+        document.getElementById('search').addEventListener('input', function () {
+            var searchValue = this.value.toLowerCase();
+            var files = document.getElementById('fileList').getElementsByClassName('download-item');
+
+            for (var i = 0; i < files.length; i++) {
+                var fileName = files[i].getElementsByTagName('h3')[0].innerText.toLowerCase();
+                if (fileName.includes(searchValue)) {
+                    files[i].style.display = 'block';
+                } else {
+                    files[i].style.display = 'none';
+                }
+            }
+        });
+
+        function updateTime() {
+            var currentTimeElement = document.getElementById('current-time');
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+
+            // Formatea para asegurarte de tener dos dígitos en cada unidad de tiempo
+            var formattedTime = `${padZero(hours)}:${padZero(minutes)}:${padZero(seconds)}`;
+
+            currentTimeElement.textContent = formattedTime;
+
+            // Actualiza cada segundo
+            setTimeout(updateTime, 1000);
+        }
+
+        function padZero(number) {
+            return number < 10 ? '0' + number : number;
+        }
+
+        // Inicia la actualización de tiempo
+        updateTime();
+    </script>
+
+</body>
+</html>
